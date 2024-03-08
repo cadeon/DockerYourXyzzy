@@ -17,7 +17,7 @@ RUN apk add --no-cache git curl tar procps \
  && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 # PYX
-ADD scripts/default.sh scripts/overrides.sh /
+ADD scripts/default.sh /
 ENV GIT_BRANCH master
 
 RUN git clone -b $GIT_BRANCH https://github.com/cadeon/PretendYoureXyzzy.git /project \
